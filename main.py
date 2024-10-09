@@ -13,7 +13,13 @@ import copy
 
 import os
 
-
+os.environ["JURASSIC_KEY"] = "xxx"
+os.environ["OPENAI_API_KEY"] = "xxx"
+os.environ['HF_TOKEN'] = "xxx"
+# os.environ['HF_ENDPOINT'] = 'https://hf-mirror.com'
+os.environ['https_proxy'] = 'http://127.0.0.1:7890'
+os.environ['http_proxy'] = 'http://127.0.0.1:7890'
+os.environ['all_proxy'] = 'socks5://127.0.0.1:7890'
 
 def get_config_and_api_key_name_from_args():
     parser = ArgumentParser()
